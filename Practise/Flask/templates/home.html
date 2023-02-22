@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="span3">
+        <h2 class="mt-10">All Marks</h2>
+        <form action="/submit" method="POST">
+            <label>Math</label>
+            <input type="number" name="math" class="span3" required>
+            <label>Bangla</label>
+            <input type="number" name="bangla" class="span3" required>
+            <label>English</label>
+            <input type="number" name="english" class="span3" required>
+            <input type="submit" value="Submit" class="btn btn-primary pull-right">
+            <div class="clearfix"></div>
+        </form>
+    </div>
+{% endblock content %}
+
+{% block details %}
+    <h1>Page Details</h1>
+{% endblock details %}

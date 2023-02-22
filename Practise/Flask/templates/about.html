@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <h1>Total Marks : {{ total_marks }}</h1>
+  <h1>Final Result : {% if total_marks>=50 %}PASSED{% else %}FAILED{% endif %}</h1>
+
+  <h2>Subject-wise Marks</h2>
+  <table border="1">
+    <tr>
+      <th>Subject</th>
+      <th>Marks</th>
+    </tr>
+    {% for subject,mark in marks.items() %}
+      <tr>
+        {# The the comment section #}
+        <!--     HTML Comment     -->
+        <td>{{ subject.title() }}</td>
+        <td>{{ mark }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock content %}
+

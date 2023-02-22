@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Page</title>
+</head>
+<body>
+    <h1>Total Marks : {{ total_marks }}</h1>
+    <h1>Final Result : {% if total_marks>=50 %}PASSED{% else %}FAILED{% endif %}</h1>
+</body>
+</html>
