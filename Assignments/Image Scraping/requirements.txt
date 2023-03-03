@@ -1,0 +1,6 @@
+flask
+flask_cros
+selenium
+pymongo
+bs4
+logging

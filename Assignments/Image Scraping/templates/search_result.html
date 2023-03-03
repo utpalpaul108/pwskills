@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="container">
+    <h2 class="mt-5 mb-3">YouTube Videos</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Channel Name</th>
+            <th>Videos</th>
+            <th>Thumbnails</th>
+            <th>Titles</th>
+            <th>Views</th>
+            <th>View Times</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for video in videos %}
+            <tr>
+              <td>{{ video["channel_name"] }}</td>
+              <td>{{ ", ".join(video["video_urls"]) }}</td>
+              <td>{{ ", ".join(video["video_thumbnails"]) }}</td>
+              <td>{{ ", ".join(video["video_titles"]) }}</td>
+              <td>{{ ", ".join(video["video_views"]) }}</td>
+              <td>{{ ", ".join(video["video_view_times"]) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock content %}
