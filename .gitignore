@@ -1,2 +1,7 @@
 .ipynb_checkpoints/
 .idea/
+logs/
+artifacts/
+dataset/
+model/
+Perceptron_model/

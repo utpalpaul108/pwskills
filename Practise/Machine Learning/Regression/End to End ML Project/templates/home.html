@@ -1,0 +1,56 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="jumbotron">
+      <h2 class="text-center">Predict FWI (Using algerian forest fires dataset)</h2>
+    </div>
+
+    <div class="row m-1">
+      <div class="col-md-6 border border-secondary p-5">
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+    <div class="form-group">
+      <label>Temperature:</label>
+      <input type="number" class="form-control" placeholder="Temperature" name="Temperature" value="{{ request.form['Temperature'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>RH:</label>
+      <input type="number" class="form-control" placeholder="RH" name="RH" value="{{ request.form['RH'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>Ws:</label>
+      <input type="number" class="form-control" placeholder="Ws" name="Ws" value="{{ request.form['Ws'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>Rain:</label>
+      <input type="number" class="form-control" placeholder="Rain" name="Rain" value="{{ request.form['Rain'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>FFMC:</label>
+      <input type="number" class="form-control" placeholder="FFMC" name="FFMC" value="{{ request.form['FFMC'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>DMC:</label>
+      <input type="number" class="form-control" placeholder="DMC" name="DMC" value="{{ request.form['DMC'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>ISI:</label>
+      <input type="number" class="form-control" placeholder="ISI" name="ISI" value="{{ request.form['ISI'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>Classes:</label>
+      <input type="number" class="form-control" placeholder="Classes" name="Classes" value="{{ request.form['Classes'] }}" required>
+    </div>
+    <div class="form-group">
+      <label>Region:</label>
+      <input type="number" class="form-control" placeholder="Region" name="Region" value="{{ request.form['Region'] }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+      </div>
+      <div class="col-md-6 border border-secondary p-5">
+        {% if result %}
+          <h5>Result : {{ result }}</h5>
+        {% endif %}
+      </div>
+    </div>
+{% endblock content %}
