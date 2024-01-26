@@ -1,0 +1,8 @@
+scikit-learn
+gensim
+wget
+wordcloud
+pandas
+spacy
+textblob
+emoji
