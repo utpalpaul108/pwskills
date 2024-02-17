@@ -6,3 +6,7 @@ pandas
 spacy
 textblob
 emoji
+plotly
+nbformat
+tensorflow
+keras
